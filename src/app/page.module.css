@@ -1,2 +1,5 @@
 .page {
+  /* background-color: #000; */
+  min-height: 100vh;
+  background: url('../static/svg/bodyBg.svg') no-repeat right;
 }
