@@ -1,6 +1,6 @@
 // app/page.tsx
 'use client';
-import { Flex, useColorMode } from '@chakra-ui/react';
+import { Button, Flex, Stack, useColorMode } from '@chakra-ui/react';
 import MyTable from './components/my-table';
 import styles from './page.module.css';
 import MyPagesForm from './pages/pages-form';
@@ -9,11 +9,11 @@ export default function Page() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div className={styles?.page}>
-      {/* <Stack spacing={4} direction="row" align="center">
+      <Stack spacing={4} direction="row" align="center">
         <Button onClick={toggleColorMode}>
           Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
         </Button>
-      </Stack> */}
+      </Stack>
       <Flex alignItems="center" pt="3rem" justifyContent="center">
         <Flex
           w="1460px"
