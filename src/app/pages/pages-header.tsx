@@ -1,10 +1,14 @@
 import { Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
+
 import HeadImg from '../../static/images/newHeadBg.png';
 import MyDeleteButton from '../components/my-delete-button';
 import MyImportButton from '../components/my-import-button';
+import MyLngSelect from '../components/my-lng-select';
 import MyWalletButton from '../components/my-wallet-button';
 export default function PagesHeader() {
+  const { t } = useTranslation();
   const color = useColorModeValue('#000', '#fff');
   return (
     <>
@@ -19,16 +23,16 @@ export default function PagesHeader() {
         alt=""
       />
       <Flex flexWrap="wrap" h="265px">
-        <Flex w="100%" fontSize="4xl" color="#FFB119">
-          市值管理工具
+        <Flex w="100%" fontSize="4xl" color="#FFB119" alignItems="top">
+          <Flex flex="1">{t('welcome')}</Flex>
+          <Flex>
+            <MyLngSelect />
+          </Flex>
         </Flex>
         <Flex w="100%" flexWrap="wrap">
           <Flex w="full">
             <Text w="797px" fontSize="1rem" color={color}>
-              City Canvas commemorates several major upgrades that have
-              significantly impacted the Ethereum ecosystem. The names of these
-              cities also symbolize the flourishing development of decentralized
-              technology and community.
+              {t('headDes')}
             </Text>
           </Flex>
           <Flex gap={8}>

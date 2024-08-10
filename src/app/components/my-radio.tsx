@@ -41,6 +41,9 @@ export default function MyRadio(props: any) {
               justifyContent="center"
               py="8px"
               flex={1}
+              onClick={() => {
+                props?.onChange?.(res?.value);
+              }}
             >
               {res?.label}
             </Flex>

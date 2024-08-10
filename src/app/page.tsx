@@ -1,17 +1,31 @@
 // app/page.tsx
 'use client';
-import { Button, Flex, Stack, useColorMode } from '@chakra-ui/react';
+import { Button, Flex, Stack, useColorMode, useToast } from '@chakra-ui/react';
 import MyTable from './components/my-table';
 import styles from './page.module.css';
 import MyPagesForm from './pages/pages-form';
 import MyPagesHeader from './pages/pages-header';
 export default function Page() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const toast = useToast();
   return (
     <div className={styles?.page}>
       <Stack spacing={4} direction="row" align="center">
         <Button onClick={toggleColorMode}>
-          Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+          主题模式 {colorMode === 'light' ? 'Dark' : 'Light'}
+        </Button>
+        <Button
+          onClick={() =>
+            toast({
+              title: '提示',
+              description: '我是一个正常提示',
+              duration: 2000,
+              variant: 'left-accent',
+              position: 'top-right',
+            })
+          }
+        >
+          提示
         </Button>
       </Stack>
       <Flex alignItems="center" pt="3rem" justifyContent="center">
