@@ -1,4 +1,10 @@
+'use client';
 import styles from './page.module.css';
+import * as web3 from "@solana/web3.js";
+import * as bs58 from 'bs58'
+import { useCallback } from 'react';
+// import { keccak_256 } from 'js-sha3'
+// import secp256k1 from 'secp256k1'
 
 export default function Index() {
   /*
@@ -6,13 +12,44 @@ export default function Index() {
    *
    * Note: The corresponding styles are in the ./index.css file.
    */
+
+
+  const getBalance = useCallback(async (event: { preventDefault: () => void; }) => {
+    event.preventDefault()
+    const feePayer = web3.Keypair.fromSecretKey(
+      bs58.default.decode('4M2dHg3p6WgQEoiP9G5hcUogEkUsRJxy51yQnc1VV1bFUsaHmzd9kEa9NbfR3ccQFCz8TNenUC8kadXmqdooEiA4')
+    )
+
+    const connection = new web3.Connection(web3.clusterApiUrl("testnet"));
+    const balance = await connection.getBalance(feePayer.publicKey)
+    // EYYHGmoECkACTG7DxXEz4ZaVLPa4CqntUVEQmTQ78hEP
+    // console.log(web3.LAMPORTS_PER_SOL)
+    let tx = new web3.Transaction().add(
+      web3.SystemProgram.transfer({
+        fromPubkey: feePayer.publicKey,
+        toPubkey: new web3.PublicKey("EYYHGmoECkACTG7DxXEz4ZaVLPa4CqntUVEQmTQ78hEP"),
+        lamports: balance / 1000,
+      })
+    );
+    tx.feePayer = feePayer.publicKey;
+
+    const txhash = await web3.sendAndConfirmTransaction(connection, tx, [feePayer]).then(console.log);
+    console.log(txhash)
+    return balance
+  }, [])
+
+
+
+  // console.log(account.publicKey.toBase58())
+
+
   return (
     <div className={styles.page}>
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
             <h1>
-              <span> Hello there, </span>
+              <span> Hello there,123 </span>
               Welcome marketTools 👋
             </h1>
           </div>
@@ -35,7 +72,8 @@ export default function Index() {
                 </svg>
                 <span>You&apos;re up and running</span>
               </h2>
-              <a href="#commands"> What&apos;s next? </a>
+              {/* <a href="#commands"> What&apos;s next? </a> */}
+              <a href="!#" onClick={getBalance}> What&apos;s next? </a>
             </div>
             <div className="logo-container">
               <svg
