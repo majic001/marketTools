@@ -3,3 +3,11 @@
   min-height: 100vh;
   background: url('../static/svg/bodyBg.svg') no-repeat right;
 }
+.box_item {
+  border: 2px dashed #ad5cff;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: rgba(9, 9, 9, 0.7);
+  min-height: 700px;
+  overflow: hidden;
+}

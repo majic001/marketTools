@@ -7,9 +7,9 @@ const styles = {
   },
 };
 
-export default function MyImportButton() {
+export default function MyImportButton(props: any) {
   return (
-    <Flex style={styles?.btn}>
+    <Flex style={styles?.btn} onClick={() => props?.onClick?.()}>
       <Image src={ImportBtnImg} alt="" />
     </Flex>
   );

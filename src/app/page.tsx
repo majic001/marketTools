@@ -1,10 +1,14 @@
 // app/page.tsx
 'use client';
 import { Button, Flex, Stack, useColorMode, useToast } from '@chakra-ui/react';
-import MyTable from './components/my-table';
+import { WalletTypeEnum } from './components/modal';
+import MyRadio from './components/my-radio';
+
 import styles from './page.module.css';
 import MyPagesForm from './pages/pages-form';
 import MyPagesHeader from './pages/pages-header';
+import MyRransactionTable from './pages/transaction-table';
+
 export default function Page() {
   const { colorMode, toggleColorMode } = useColorMode();
   const toast = useToast();
@@ -30,33 +34,28 @@ export default function Page() {
       </Stack>
       <Flex alignItems="center" pt="3rem" justifyContent="center">
         <Flex
-          w="1460px"
+          w="1700px"
           gap="2"
           flexWrap="wrap"
           style={{ position: 'relative' }}
         >
           <MyPagesHeader />
-          <Flex gap="7" w="full">
-            <Flex
-              w="465px"
-              border="2px dashed #AD5CFF"
-              borderRadius="12px"
-              p="4"
-              bg="rgba(9, 9, 9, 0.7)"
-              minH={700}
-            >
+          <Flex>
+            <Flex className={styles?.box_item} w="460px" minH={700}>
               <MyPagesForm />
             </Flex>
             <Flex
-              flex="1"
-              border="2px dashed #AD5CFF"
-              borderRadius="12px"
-              bg="rgba(9, 9, 9, 0.7)"
-              p="4"
-              flexWrap="wrap"
+              className={styles?.box_item}
+              w="1220px"
+              wrap="wrap"
               minH={700}
+              ml="20px"
+              direction="column"
             >
-              <MyTable />
+              <Flex pb="4" w="full">
+                <MyRadio items={WalletTypeEnum} value={'transaction'} />
+              </Flex>
+              <MyRransactionTable />
             </Flex>
           </Flex>
         </Flex>

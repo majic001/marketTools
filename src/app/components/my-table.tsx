@@ -1,81 +1,51 @@
 import {
   Flex,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
-  Text,
   Th,
   Thead,
   Tr,
 } from '@chakra-ui/react';
-import Image from 'next/image';
-import LinkIcon from '../../static/svg/link-icon.svg';
-import LoGoIconETH from '../../static/svg/logo/ETH.svg';
-import LoGoIconUSDT from '../../static/svg/logo/USDT.svg';
+import { useEffect } from 'react';
 import MyPagination from './my-pagination';
-import MyTag from './my-tag';
 
-export default function MyTable() {
+export default function MyTable(props: any) {
+  useEffect(() => {
+    console.log(props?.columns, 'props?.columns');
+  }, [props?.columns]);
   return (
-    <TableContainer w="full">
-      <Table variant="simple">
-        <TableCaption>
-          <MyPagination />
-        </TableCaption>
-        <Thead bg="#222">
-          <Tr>
-            <Th>WALLET</Th>
-            <Th>HASH</Th>
-            <Th>FROM</Th>
-            <Th>TO</Th>
-            <Th>STATUS</Th>
-            <Th>GASFEE</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          {[1, 2, 3, 4, 5].map((i) => {
-            return (
-              <Tr color="#BABABA" key={i}>
-                <Td>
-                  <Flex>
-                    <Text pr={1}>0xdA....31ec7</Text>
-                    <Image src={LinkIcon} alt="" />
-                  </Flex>
-                </Td>
-                <Td>0xdA....31ec7</Td>
-                <Td>
-                  <Flex>
-                    <Image src={LinkIcon} alt="" />
-                    <Image
-                      src={LoGoIconETH}
-                      alt=""
-                      style={{ margin: '0 5px' }}
-                    />
-                    <Text>0.01 ETH</Text>
-                  </Flex>
-                </Td>
-                <Td>
-                  <Flex>
-                    <Image src={LoGoIconUSDT} alt="" />
-                    <Text pl={1}>35.23 USDT</Text>
-                  </Flex>
-                </Td>
-                <Td>
-                  <MyTag label="SUCCESS" />
-                </Td>
-                <Td>
-                  <Flex fontSize="14px">0.0023 ETH</Flex>
-                  <Flex fontSize="12px" color="#7C7C7C">
-                    ≈ $1.38
-                  </Flex>
-                </Td>
-              </Tr>
-            );
-          })}
-        </Tbody>
-      </Table>
-    </TableContainer>
+    <>
+      <TableContainer w="full">
+        <Table variant="simple" w="full">
+          <Thead bg="#222" w="full">
+            <Tr w="full">
+              {props?.columns?.map((res: any, index: number) => {
+                return <Th key={index}>{res?.title}</Th>;
+              })}
+            </Tr>
+          </Thead>
+          <Tbody w="full">
+            {props?.dataSource?.map((res: any, index: number) => {
+              return (
+                <Tr color="#BABABA" key={index} w="full">
+                  {props?.columns?.map((k: any, idx: number) => {
+                    return k?.render ? (
+                      <Td key={idx}>{k?.render(res)}</Td>
+                    ) : (
+                      <Td key={idx}>{res[k?.dataIndex]}</Td>
+                    );
+                  })}
+                </Tr>
+              );
+            })}
+          </Tbody>
+        </Table>
+      </TableContainer>
+      <Flex py={5}>
+        <MyPagination />
+      </Flex>
+    </>
   );
 }

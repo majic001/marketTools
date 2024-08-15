@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 
 import HeadImg from '../../static/images/newHeadBg.png';
 import MyDeleteButton from '../components/my-delete-button';
-import MyImportButton from '../components/my-import-button';
 import MyLngSelect from '../components/my-lng-select';
 import MyWalletButton from '../components/my-wallet-button';
+import MyImportWallet from './modal/ImportWallet';
 export default function PagesHeader() {
   const { t } = useTranslation();
   const color = useColorModeValue('#000', '#fff');
@@ -20,7 +20,6 @@ export default function PagesHeader() {
           height: '271px',
           width: 'auto',
         }}
-        alt=""
       />
       <Flex flexWrap="wrap" h="265px">
         <Flex w="100%" fontSize="4xl" color="#FFB119" alignItems="top">
@@ -36,7 +35,7 @@ export default function PagesHeader() {
             </Text>
           </Flex>
           <Flex gap={8}>
-            <MyImportButton />
+            <MyImportWallet />
             <MyWalletButton />
             <MyDeleteButton />
           </Flex>

@@ -2,16 +2,18 @@ import { Flex, Text } from '@chakra-ui/react';
 
 const item = {
   color: '#fff',
+  maxWidth: '100px',
 };
 const item_active = {
   backgroundColor: '#FFB119',
   color: '#000',
   borderRadius: '10px',
+  maxWidth: '150px',
 };
 
 export default function MyRadio(props: any) {
   return (
-    <Flex flexWrap="wrap" w="full">
+    <Flex flexWrap="wrap" w="full" minH="45px">
       {props?.label ? (
         <Flex mb="5px">
           <Text fontSize="0.9em" fontWeight={600}>

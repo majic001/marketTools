@@ -1,10 +1,15 @@
 import { Flex } from '@chakra-ui/react';
+import {
+  AgreementEnum,
+  PlaceOrderEnum,
+  SpeedEnum,
+  TypeEnum,
+} from '../components/modal';
 import MyInput from '../components/my-input';
 import MyPrimaryButton from '../components/my-primary-button';
 import MyRadio from '../components/my-radio';
 import MySelect from '../components/my-select';
-import MyTopBottomValue from '../components/my-top-bottom-value';
-import { AgreementEnum, PlaceOrderEnum, SpeedEnum, TypeEnum } from './modal';
+import MySelectBi from './modal/SelectBi';
 
 export default function PagesForm() {
   return (
@@ -17,7 +22,8 @@ export default function PagesForm() {
           <MyRadio items={TypeEnum} value={2} />
         </Flex>
       </Flex>
-      <MyTopBottomValue />
+      <MySelectBi mt={2} />
+      <MySelectBi mt={4} />
       <Flex w="full" gap={5} pt={4}>
         <Flex w="50%">
           <MyInput addonBefore="$" label="当前价格" />

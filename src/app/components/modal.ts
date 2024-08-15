@@ -19,3 +19,8 @@ export const AgreementEnum = [
   { label: 'V2', value: 1 },
   { label: 'V3', value: 2 },
 ];
+
+export const WalletTypeEnum = [
+  { label: '查看交易', value: 'transaction' },
+  { label: '查看钱包', value: 'wallet' },
+];
