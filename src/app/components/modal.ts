@@ -12,7 +12,7 @@ export const SpeedEnum = [
   { label: '默认', value: 1 },
   { label: '慢', value: 2 },
   { label: '块', value: 3 },
-  { label: '飞快', value: 3 },
+  { label: '飞快', value: 4 },
 ];
 
 export const AgreementEnum = [

@@ -1,8 +1,9 @@
 import { Flex, Text } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
 const item = {
   color: '#fff',
-  maxWidth: '100px',
+  maxWidth: '150px',
 };
 const item_active = {
   backgroundColor: '#FFB119',
@@ -12,6 +13,10 @@ const item_active = {
 };
 
 export default function MyRadio(props: any) {
+  const [value, setValue] = useState('');
+  useEffect(() => {
+    setValue(props?.value);
+  }, [props?.value]);
   return (
     <Flex flexWrap="wrap" w="full" minH="45px">
       {props?.label ? (
@@ -37,13 +42,14 @@ export default function MyRadio(props: any) {
           return (
             <Flex
               key={index}
-              style={res?.value === props?.value ? item_active : item}
+              style={res?.value === value ? item_active : item}
               fontSize="0.9em"
               fontWeight={600}
               justifyContent="center"
               py="8px"
               flex={1}
               onClick={() => {
+                setValue(res?.value);
                 props?.onChange?.(res?.value);
               }}
             >

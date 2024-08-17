@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
@@ -5,38 +6,36 @@ import { useTranslation } from 'react-i18next';
 import HeadImg from '../../static/images/newHeadBg.png';
 import MyDeleteButton from '../components/my-delete-button';
 import MyLngSelect from '../components/my-lng-select';
-import MyWalletButton from '../components/my-wallet-button';
 import MyImportWallet from './modal/ImportWallet';
+const stylesImg = {
+  position: 'absolute',
+  right: '-50px',
+  height: '271px',
+  width: 'auto',
+};
 export default function PagesHeader() {
   const { t } = useTranslation();
   const color = useColorModeValue('#000', '#fff');
   return (
     <>
-      <Image
-        src={HeadImg}
-        style={{
-          position: 'absolute',
-          right: '-50px',
-          height: '271px',
-          width: 'auto',
-        }}
-      />
-      <Flex flexWrap="wrap" h="265px">
-        <Flex w="100%" fontSize="4xl" color="#FFB119" alignItems="top">
-          <Flex flex="1">{t('welcome')}</Flex>
+      <Image src={HeadImg} style={stylesImg} />
+      <Flex w="full" flexWrap="wrap" h="265px" direction="column">
+        <Flex w="full" alignItems="top" justifyContent="">
+          <Flex flex="1" fontSize="4xl" color="#FFB119">
+            {t('welcome')}
+          </Flex>
           <Flex>
             <MyLngSelect />
           </Flex>
         </Flex>
-        <Flex w="100%" flexWrap="wrap">
+        <Flex w="full" flexWrap="wrap" pt={7}>
           <Flex w="full">
             <Text w="797px" fontSize="1rem" color={color}>
               {t('headDes')}
             </Text>
           </Flex>
-          <Flex gap={8}>
+          <Flex gap={8} pt={10}>
             <MyImportWallet />
-            <MyWalletButton />
             <MyDeleteButton />
           </Flex>
         </Flex>
