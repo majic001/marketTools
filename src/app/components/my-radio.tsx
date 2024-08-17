@@ -21,7 +21,7 @@ export default function MyRadio(props: any) {
     <Flex flexWrap="wrap" w="full" minH="45px">
       {props?.label ? (
         <Flex mb="5px">
-          <Text fontSize="0.9em" fontWeight={600}>
+          <Text fontSize="0.9em" fontWeight={600} color="#fff">
             {props?.label || '标题'}
           </Text>
         </Flex>

@@ -1,15 +1,17 @@
 import { DeleteIcon } from '@chakra-ui/icons';
 import { Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 import LinkIcon from '../../static/svg/link-icon.svg';
 import LoGoIconETH from '../../static/svg/logo/ETH.svg';
 import LoGoIconUSDT from '../../static/svg/logo/USDT.svg';
 import MyTable from '../components/my-table';
 
 export default function WalletTable() {
+  const { t } = useTranslation();
   const columns = [
     {
-      title: 'WALLET',
+      title: t('walletTable.td1'),
       dataIndex: 'wallet',
       key: 'wallet',
       render: (e: any) => {
@@ -22,7 +24,7 @@ export default function WalletTable() {
       },
     },
     {
-      title: 'Network Balance',
+      title: t('walletTable.td2'),
       dataIndex: 'networkbalance',
       key: 'NetworkBalance',
       render: (e: any) => {
@@ -36,7 +38,7 @@ export default function WalletTable() {
     },
 
     {
-      title: 'From Token Balance',
+      title: t('walletTable.td3'),
       dataIndex: 'fromtokenbalance',
       key: 'FromTokenBalance',
       render: (e: any) => {
@@ -49,7 +51,7 @@ export default function WalletTable() {
       },
     },
     {
-      title: 'To Token Balance',
+      title: t('walletTable.td4'),
       dataIndex: 'totokenbalance',
       key: 'ToTokenBalance',
       render: (e: any) => {
@@ -62,7 +64,7 @@ export default function WalletTable() {
       },
     },
     {
-      title: 'Operate',
+      title: t('table.Operate'),
       key: 'operate',
       render: (e: any) => {
         return (

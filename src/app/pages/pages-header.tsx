@@ -28,13 +28,13 @@ export default function PagesHeader() {
             <MyLngSelect />
           </Flex>
         </Flex>
-        <Flex w="full" flexWrap="wrap" pt={7}>
+        <Flex w="full" flexWrap="wrap" pt={6}>
           <Flex w="full">
             <Text w="797px" fontSize="1rem" color={color}>
               {t('headDes')}
             </Text>
           </Flex>
-          <Flex gap={8} pt={10}>
+          <Flex gap={8} pt={8}>
             <MyImportWallet />
             <MyDeleteButton />
           </Flex>

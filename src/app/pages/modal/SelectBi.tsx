@@ -24,7 +24,11 @@ export default function SelectBi(props: any) {
   const finalRef = React.useRef(null);
   return (
     <>
-      <MyTopBottomValue mt={props?.mt || 0} onClick={onOpen} />
+      <MyTopBottomValue
+        mt={props?.mt || 0}
+        label={props?.label || ''}
+        onClick={onOpen}
+      />
       <Modal
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}

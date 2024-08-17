@@ -22,13 +22,15 @@ export default function MyTopBottomValue(props: any) {
     >
       <Flex alignItems="center">
         <Image src={LoGoIconETH} style={{ width: '38px' }} alt="" />
-        <Text px={3}>ETH</Text>
+        <Text px={3} color="#fff">
+          ETH
+        </Text>
       </Flex>
       <Flex alignItems="center">
-        <Text pr={3} fontSize="14px">
+        <Text pr={3} fontSize="14px" color="#fff">
           {props?.label || '基础代币'}
         </Text>
-        <TriangleDownIcon boxSize={4} />
+        <TriangleDownIcon boxSize={4} color="#fff" />
       </Flex>
     </Flex>
   );

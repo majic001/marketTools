@@ -20,6 +20,7 @@ export default function MySelect() {
         h="45px"
         w="full"
         borderRadius="12px"
+        color="#fff"
         rightIcon={<TriangleDownIcon boxSize={3} />}
       >
         <Flex alignItems="center" w="full">
