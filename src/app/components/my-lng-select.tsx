@@ -48,7 +48,7 @@ export default function MySelect() {
             alt=""
             style={{ width: '25px' }}
           />
-          <Text pl={2} fontSize="14px">
+          <Text pl={2} fontSize="14px" color="#fff">
             {list[getCurrentLng]?.label}
           </Text>
         </Flex>

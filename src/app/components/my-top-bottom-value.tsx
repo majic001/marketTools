@@ -15,7 +15,7 @@ const styles = {
 export default function MyTopBottomValue(props: any) {
   return (
     <Flex
-      style={styles}
+      css={styles}
       px={4}
       mt={props?.mt || 0}
       onClick={() => props?.onClick?.()}

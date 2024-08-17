@@ -49,7 +49,7 @@ export default function PagesForm() {
         </Flex>
       </Flex>
       <Flex w="full" pt={4}>
-        <MyInput label="自定义RPC" />
+        <MyInput label={t('customizeRPC')} />
       </Flex>
       <Flex w="full" pt={4} gap={5}>
         <Flex w="50%">

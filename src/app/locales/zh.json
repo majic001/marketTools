@@ -16,5 +16,6 @@
   "agreement": "协议",
   "submit.btn.start": "开始",
   "basicToken": "基础代币",
-  "targetToken": "目标代币"
+  "targetToken": "目标代币",
+  "customizeRPC": "自定义RPC"
 }

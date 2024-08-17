@@ -33,15 +33,24 @@ export default function Page() {
           </Button>
         </Stack>
         <Flex alignItems="center" pt="3rem" justifyContent="center">
-          <Flex w="1700px" gap="2" flexWrap="wrap" position="relative">
+          <Flex
+            w={{ base: 'full', sm: 'full', md: '1200px', lg: '1400px' }}
+            gap="2"
+            flexWrap={{ base: 'revert', sm: 'revert', md: 'wrap' }}
+            position="relative"
+          >
             <MyPagesHeader />
             <Flex>
-              <Flex className={styles?.box_item} w="460px" minH={700}>
+              <Flex
+                className={styles?.box_item}
+                w={{ base: 'full', sm: 'full', md: '400px', lg: '440px' }}
+                minH={700}
+              >
                 <MyPagesForm />
               </Flex>
               <Flex
                 className={styles?.box_item}
-                w="1220px"
+                w={{ base: 'full', sm: 'full', md: '800px', lg: '960px' }}
                 wrap="wrap"
                 minH={700}
                 ml="20px"

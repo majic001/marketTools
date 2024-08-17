@@ -42,7 +42,7 @@ export default function MyRadio(props: any) {
           return (
             <Flex
               key={index}
-              style={res?.value === value ? item_active : item}
+              css={res?.value === value ? item_active : item}
               fontSize="0.9em"
               fontWeight={600}
               justifyContent="center"

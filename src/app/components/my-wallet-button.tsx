@@ -9,7 +9,7 @@ const styles = {
 
 export default function MyWalletButton() {
   return (
-    <Flex style={styles?.btn}>
+    <Flex css={styles?.btn}>
       <Image src={WalletBtnImg} alt="" />
     </Flex>
   );

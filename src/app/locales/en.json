@@ -16,5 +16,6 @@
   "agreement": "agreement",
   "submit.btn.start": "Start",
   "basicToken": "Basic token",
-  "targetToken": "Target Token"
+  "targetToken": "Target Token",
+  "customizeRPC": "Customize RPC"
 }

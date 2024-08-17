@@ -18,7 +18,7 @@ const styles = {
 
 export default function MyTag(props: TagPrpos) {
   return (
-    <Flex style={styles}>
+    <Flex css={styles}>
       <Text fontSize="12px">{props?.label}</Text>
     </Flex>
   );

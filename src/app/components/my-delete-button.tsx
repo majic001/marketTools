@@ -9,7 +9,7 @@ const styles = {
 
 export default function MyDeleteButton() {
   return (
-    <Flex style={styles?.btn}>
+    <Flex css={styles?.btn}>
       <Image src={deleteImg} alt="" />
     </Flex>
   );

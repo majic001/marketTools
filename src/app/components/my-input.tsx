@@ -11,7 +11,7 @@ export default function MyInput(props: any) {
     <Flex flexWrap="wrap" flex={1}>
       {props?.label ? (
         <Flex mb="5px">
-          <Text fontSize="0.9em" fontWeight={600}>
+          <Text fontSize="0.9em" fontWeight={600} color="#fff">
             {props?.label}
           </Text>
         </Flex>
