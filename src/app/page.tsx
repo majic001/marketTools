@@ -32,7 +32,7 @@ export default function Page() {
             提示
           </Button>
         </Stack>
-        <Flex alignItems="center" pt="3rem" justifyContent="center">
+        <Flex alignItems="center" pt={3} justifyContent="center">
           <Flex
             w={{ base: 'full', sm: 'full', md: '1200px', lg: '1400px' }}
             gap="2"

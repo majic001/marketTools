@@ -46,6 +46,7 @@ export default function MyInput(props: any) {
           pr={!props?.addonBefore ? '10px' : '0'}
           h="45px"
           placeholder={props?.placeholder}
+          color="#fff"
         />
       </InputGroup>
     </Flex>
