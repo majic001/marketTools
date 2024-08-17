@@ -1,0 +1,9 @@
+.header {
+  position: absolute;
+  right: -50px;
+  height: 271px;
+  width: auto;
+}
+.formWidth {
+  width: 100%;
+}

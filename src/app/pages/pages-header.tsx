@@ -2,23 +2,18 @@
 import { Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-
 import HeadImg from '../../static/images/newHeadBg.png';
 import MyDeleteButton from '../components/my-delete-button';
 import MyLngSelect from '../components/my-lng-select';
 import MyImportWallet from './modal/ImportWallet';
-const stylesImg = {
-  position: 'absolute',
-  right: '-50px',
-  height: '271px',
-  width: 'auto',
-};
+import styles from './pages.module.css';
+
 export default function PagesHeader() {
   const { t } = useTranslation();
   const color = useColorModeValue('#000', '#fff');
   return (
     <>
-      <Image src={HeadImg} style={stylesImg} />
+      <Image src={HeadImg} className={styles.header} alt="header" />
       <Flex w="full" flexWrap="wrap" h="265px" direction="column">
         <Flex w="full" alignItems="top" justifyContent="">
           <Flex flex="1" fontSize="4xl" color="#FFB119">

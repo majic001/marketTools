@@ -11,11 +11,11 @@ import MyPrimaryButton from '../components/my-primary-button';
 import MyRadio from '../components/my-radio';
 import MySelect from '../components/my-select';
 import MySelectBi from './modal/SelectBi';
-
+import styles from './pages.module.css';
 export default function PagesForm() {
   const { t } = useTranslation();
   return (
-    <div style={{ width: '100%' }}>
+    <div className={styles.formWidth}>
       <Flex w="full" h="54px" gap={5}>
         <Flex w="55%" h="54px">
           <MySelect />
