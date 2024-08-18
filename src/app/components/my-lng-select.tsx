@@ -25,7 +25,7 @@ const list: any = {
     value: 'zh',
   },
 };
-export default function MySelect() {
+export default function MySelect(props: any) {
   const [getCurrentLng, setCurrentLng] = useState<string>('en');
   const { t, i18n } = useTranslation();
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function MySelect() {
       <MenuButton
         as={Button}
         bg="#222"
-        h="45px"
+        h={props?.h || '45px'}
         w="full"
         borderRadius="12px"
         rightIcon={<TriangleDownIcon boxSize={3} />}

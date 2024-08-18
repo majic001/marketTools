@@ -11,13 +11,13 @@ import {
 import Image from 'next/image';
 import LoGoIconETH from '../../static/svg/logo/ETH.svg';
 import LoGoIconUSDT from '../../static/svg/logo/USDT.svg';
-export default function MySelect() {
+export default function MySelect(props: any) {
   return (
     <Menu>
       <MenuButton
         as={Button}
         bg="#222"
-        h="45px"
+        h={props?.h || '45px'}
         w="full"
         borderRadius="12px"
         color="#fff"

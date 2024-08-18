@@ -9,7 +9,6 @@ import {
 import MyInput from '../components/my-input';
 import MyPrimaryButton from '../components/my-primary-button';
 import MyRadio from '../components/my-radio';
-import MySelect from '../components/my-select';
 import MySelectBi from './modal/SelectBi';
 import styles from './pages.module.css';
 export default function PagesForm() {
@@ -17,12 +16,7 @@ export default function PagesForm() {
   return (
     <div className={styles.formWidth}>
       <Flex w="full" h="54px" gap={5}>
-        <Flex w="55%" h="54px">
-          <MySelect />
-        </Flex>
-        <Flex w="45%" h="54px">
-          <MyRadio items={TypeEnum} value={2} />
-        </Flex>
+        <MyRadio items={TypeEnum} value={2} />
       </Flex>
       <MySelectBi mt={2} label={t('basicToken')} />
       <MySelectBi mt={4} label={t('targetToken')} />
