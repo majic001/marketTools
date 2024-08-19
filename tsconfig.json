@@ -36,7 +36,7 @@
     "src/**/*.js",
     "src/**/*.jsx",
     ".next/types/**/*.ts",
-    "dist/market-tools/.next/types/**/*.ts",
+    "dist/org/.next/types/**/*.ts",
     "next-env.d.ts"
   ],
   "exclude": [
@@ -45,6 +45,6 @@
     "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
-    "dist/marketTools/**/*"
+    "dist/org/**/*"
   ]
 }

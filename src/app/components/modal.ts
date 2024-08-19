@@ -1,0 +1,25 @@
+export const TypeEnum = [
+  { label: '拉盘', value: true },
+  { label: '砸盘', value: false },
+];
+export const PlaceOrderEnum = [
+  { label: '全部', value: 1 },
+  { label: '随机', value: 2 },
+  { label: '固定', value: 3 },
+];
+
+export const SpeedEnum = [
+  { label: '慢', value: 1 },
+  { label: '块', value: 2 },
+  { label: '飞快', value: 3 },
+];
+
+export const AgreementEnum = [
+  { label: 'V2', value: 1 },
+  { label: 'V3', value: 2 },
+];
+
+export const WalletTypeEnum = [
+  { label: '查看交易', value: 'transaction' },
+  { label: '查看钱包', value: 'wallet' },
+];

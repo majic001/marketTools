@@ -1,0 +1,21 @@
+{
+  "welcome": "市值管理工具",
+  "headDes": "City Canvas纪念了对以太坊生态系统产生重大影响的几次重大升级。这些城市的名字也象征着去中心化技术和社区的蓬勃发展。",
+  "submit.btn": "确定",
+  "import.wallet.title": "导入钱包",
+  "import.wallet.des": "请填写钱包的秘钥，多个钱包请填写多个秘钥，一行一个排列",
+  "walletTable.td1": "钱包",
+  "walletTable.td2": "地址",
+  "walletTable.td3": "基础资产余额",
+  "walletTable.td4": "目标资产余额",
+  "table.Operate": "操作",
+  "targetPrice": "目标价格",
+  "currentPrice": "当前价格",
+  "eachOrderAmount": "每次下单金额",
+  "speed": "速度",
+  "agreement": "协议",
+  "submit.btn.start": "开始",
+  "basicToken": "基础代币",
+  "targetToken": "目标代币",
+  "customizeRPC": "自定义RPC"
+}

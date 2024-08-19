@@ -1,0 +1,21 @@
+{
+  "welcome": "Market value management tool",
+  "headDes": "City Canvas commemorates several major upgrades that have significantly impacted the Ethereum ecosystem. The names of these cities also symbolize the flourishing development of decentralized technology and community.",
+  "walletTable.td1": "WALLET",
+  "walletTable.td2": "ADDRESS",
+  "walletTable.td3": "From Token Balance",
+  "walletTable.td4": "To Token Balance",
+  "table.Operate": "Operate",
+  "submit.btn": "ok",
+  "import.wallet.title": "Import Wallet",
+  "import.wallet.des": "Please fill in the wallet key. For multiple wallets, please fill in multiple keys, arranged one by one in a row",
+  "targetPrice": "Target price",
+  "currentPrice": "Current price",
+  "eachOrderAmount": "Each order amount",
+  "speed": "speed",
+  "agreement": "agreement",
+  "submit.btn.start": "Start",
+  "basicToken": "Basic token",
+  "targetToken": "Target Token",
+  "customizeRPC": "Customize RPC"
+}
